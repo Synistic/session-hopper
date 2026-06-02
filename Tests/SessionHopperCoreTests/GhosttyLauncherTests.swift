@@ -10,7 +10,9 @@ final class GhosttyLauncherTests: XCTestCase {
             gitBranch: "codex/session-hopper",
             lastActivity: Date(timeIntervalSince1970: 0)
         )
-        let launcher = GhosttyLauncher()
+        let launcher = GhosttyLauncher(
+            claudeExecutablePath: "/Users/danielschmilinski/.local/bin/claude"
+        )
 
         XCTAssertEqual(
             launcher.makeOpenArguments(for: session),
